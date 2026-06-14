@@ -1,0 +1,22 @@
+<div class="container mt-5" style="max-width: 400px;">
+  <div class="card">
+    <div class="card-header">Connexion</div>
+    <div class="card-body">
+      <form [formGroup]="loginFormGroup" (ngSubmit)="handleLogin()">
+        <div class="mb-3">
+          <label class="form-label">Utilisateur</label>
+          <input type="text" formControlName="username" class="form-control" placeholder="user1 ou admin">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Mot de passe</label>
+          <input type="password" formControlName="password" class="form-control" placeholder="12345">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Se connecter</button>
+      </form>
+      <div class="text-danger mt-3" *ngIf="errorMessage">{{ errorMessage }}</div>
+      <p class="text-muted mt-3 small">
+        user1 / 12345 (USER) — admin / 12345 (USER + ADMIN)
+      </p>
+    </div>
+  </div>
+</div>

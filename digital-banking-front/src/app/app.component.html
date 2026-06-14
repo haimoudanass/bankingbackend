@@ -1,0 +1,12 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" *ngIf="authService.isAuthenticated">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/admin/customers">Digital Banking</a>
+    <div class="navbar-nav me-auto">
+      <a class="nav-link" routerLink="/admin/customers" routerLinkActive="active">Clients</a>
+      <a class="nav-link" routerLink="/admin/new-customer" routerLinkActive="active" *ngIf="isAdmin()">Nouveau client</a>
+    </div>
+    <span class="navbar-text text-light me-3">{{ authService.username }}</span>
+    <button class="btn btn-outline-light btn-sm" (click)="handleLogout()">Déconnexion</button>
+  </div>
+</nav>
+<router-outlet></router-outlet>

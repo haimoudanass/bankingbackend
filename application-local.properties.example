@@ -1,0 +1,4 @@
+# Copiez vers application-local.properties et remplissez vos cles
+spring.ai.openai.api-key=sk-proj-VOTRE_CLE_OPENAI
+telegram.bot.token=VOTRE_TOKEN_TELEGRAM
+telegram.bot.username=DigitalBankingProjet_Bot
